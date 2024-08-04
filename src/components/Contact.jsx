@@ -17,18 +17,18 @@ return(<>
     <form className="form" onSubmit={handling()}>
       <div className="Name">
         <label>Name:</label>
-        <input type="text" value={Name} onChange={(e)=>setName(e.target.value)}></input>
+        <input id="NameText" type="text" value={Name} onChange={(e)=>setName(e.target.value)}></input>
         </div>
         <div className="Email">
         <label>Email:</label>
-        <input type="text" value={Email} onChange={(e)=>setEmail(e.target.value)}></input>
+        <input id="EmailText" type="text" value={Email} onChange={(e)=>setEmail(e.target.value)}></input>
         </div>
         <div className="Message">
         <label id="TM">Message:</label>
-        <textarea type="text" value={Message} onChange={(e)=>setMessage(e.target.value)}></textarea>
+        <textarea id="txtM" type="text" value={Message} onChange={(e)=>setMessage(e.target.value)}></textarea>
         </div>
         <div id="submit">
-            <button type="submit">Submit</button>
+            <button id="submitBtn" type="submit">Submit</button>
             </div>
     </form>
 </>)

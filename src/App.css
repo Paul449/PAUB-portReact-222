@@ -1,3 +1,4 @@
+
 .wrapper{
 
   display: flex;
@@ -5,10 +6,8 @@
 }
 header{
 
-  background-color: blue;
+  background-color: #E5E4E2;
   padding-bottom: 5%;
-  background-image: url(https://ak.picdn.net/shutterstock/videos/2649788/thumb/1.jpg);
-  background-size: 30%;
 }
 
 .nav-list{
@@ -17,46 +16,51 @@ header{
   position: relative;
   left: 55%;
   bottom: 20%;
+  color: black;
 }
 #AM{
   background-color:transparent;
   background-repeat: no-repeat;
-  border: solid 2px #F0FFFF;
-  color: #F0FFFF;
+  border: solid 2px black;
+  color: black;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
+  font-size: 20px;
+  font-family: 'Roboto Slab';
 }
 #C{
   background-color:transparent;
   background-repeat: no-repeat;
-  border: solid 2px #F0FFFF;
-  color: #F0FFFF;
+  border: solid 2px black;
+  color: black;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
 }
 #P{
   background-color:transparent;
   background-repeat: no-repeat;
-  border: solid 2px #F0FFFF;
-  color: #F0FFFF;
+  border: solid 2px black;
+  color: black;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
+  font-size: 20px;
+  font-family: 'Roboto Slab';
 }
 #R{
   background-color:transparent;
   background-repeat: no-repeat;
-  border: solid 2px #F0FFFF;
-  color: #F0FFFF;
+  border: solid 2px black;
+  color: black;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
+  font-size: 20px;
+  font-family: 'Roboto Slab';
 }
 #One{
   margin-right: 2%;
@@ -68,24 +72,28 @@ header{
   margin-right: 2%;
 }
 .content{
-  color: #F0FFFF;
-  background-color: #45B8AC;
+  color: black;
+  background-color: #F0F0F0;
   padding-bottom: 10%;
 }
 footer{
  
-  background-color: #808080;
+  background-color: #E5E4E2;
   padding: 3%;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 5%;
   justify-content: center;
 }
 #G{
   margin-right: 4%;
+  
 }
 #L{
   margin-right: 4%;
 }
 /*About Me section*/
+
 .About-Me{
   text-align: center;
 }
@@ -93,6 +101,21 @@ footer{
   text-align: center;
 }
 .paragraph{
+  display: inline-block;
+  text-align: left;
+  font-size: x-large;
+  font-family:'Roboto Slab';
+  text-indent: 0px; 
+}
+
+.journey{
+  display: inline-block;
+  text-align: left;
+  font-size: x-large;
+  font-family: 'Roboto Slab';
+  text-indent: 0px;
+}
+#Journey-T{
   text-align: center;
 }
 /*portfolio section*/
@@ -131,24 +154,51 @@ footer{
   display: inline-block;
   text-align: center;
   position: relative;
-  left: 45%;
+  left: 38%;
   margin-top: 15%;
   padding: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
 }
 .Name{
-margin-bottom: 2%;
+margin-bottom: 4%;
+font-size: large;
 }
 .Email{
-margin-bottom: 2%;
+margin-bottom: 4%;
+font-size: large;
 }
 .Message{
   display: flex;
   flex-direction: column;
-  margin-bottom: 3%;
+  margin-bottom: 4%;
+  font-size: large;
+}
+#NameText{
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#EmailText{
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
 }
 #TM{
   position: relative;
   right: 3px;
+  margin-bottom: 5px;
+}
+#txtM{
+  padding: 25%;
+  padding-right: 6%;
+  font-size: large;
+}
+#submitBtn{
+  padding: 5%;
+  padding-right: 3%;
+  padding-left: 3%;
+  font-size: large;
 }
 /*button hovers*/
 #AM:hover{
@@ -180,3 +230,29 @@ margin-bottom: 2%;
   background-color: #808080;
   visibility: visible;
 }
+/*Resume*/
+#resume-title{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+}
+#download{
+  font-size: 20px;
+}
+.skill1{
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+}
+.skill2{
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+}
+.projectLink{
+  text-align: center;
+}
+#G3{
+  position: relative;
+  bottom: 10px;
+}
+

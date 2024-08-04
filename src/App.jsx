@@ -35,9 +35,15 @@ function Tabs(){
         {Tabs()}
       </div>
       <footer>
+      <a href='https://github.com/Paul449'>
       <img id='G' width={50 + 'px'} height={50 + 'px'} src='https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg' alt='github logo'></img>
+      </a>
+      <a href='https://www.linkedin.com/in/paul-bilbatua-6b4876232/'>
       <img id='L' width={50 + 'px'} height={50 + 'px'} src='https://www.svgrepo.com/show/922/linkedin.svg' alt='linkedlin logo'></img>
+      </a>
+      <a href='https://stackoverflow.com/users/23615930/paul-biro'>
       <img id='S' width={50 + 'px'} height={50 + 'px'} src='https://upload.wikimedia.org/wikipedia/commons/e/ef/Stack_Overflow_icon.svg' alt='stackoverflow'></img>
+      </a>
       </footer>
     </div>
   </>)

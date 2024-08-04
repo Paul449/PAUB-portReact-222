@@ -2,6 +2,7 @@
   "name": "paul-portfolio",
   "private": true,
   "version": "0.0.0",
+  "permissions":["downloads", "downloads.open"],
   "type": "module",
   "scripts": {
     "dev": "vite",
