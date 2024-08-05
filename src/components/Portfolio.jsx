@@ -8,7 +8,7 @@ return(<>
     <div className="Project-1">
     <div className="image1">
     <a href="https://paul449.github.io/DexPlorer/">
-        <img src="src/assets/Screenshot 2024-07-23 191438.png" alt="Calculator" width={180 + 'px'} height={180 + 'px'}></img>
+        <img src="src/assets/Screenshot 2024-07-23 191438.png" alt="PokemonEncyclopedia" width={180 + 'px'} height={180 + 'px'}></img>
         <p id="calculator">Dexplorer</p>
         </a>
         <div className="projectLink1">
@@ -40,7 +40,7 @@ return(<>
     </div>
     <div className="Project-4">
     <div className="image4">
-        <img src="src/assets/Screenshot 2024-07-23 200824.png" alt="Music" width={180 + 'px'} height={180 + 'px'}></img>
+        <img src="src/assets/Screenshot 2024-07-23 200824.png" alt="Basketball Voter" width={180 + 'px'} height={180 + 'px'}></img>
         <p>Vote4Goat</p>
         <div className="projectLink4">
         <img id='G4' width={30 + 'px'} height={30 + 'px'} src='https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg' alt='github logo'></img>
