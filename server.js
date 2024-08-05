@@ -1,12 +1,16 @@
-const express = require('express');
-const PATH = require('path');
+import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
 const App = express();
 const PORT = process.env.PORT || 3000;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 //middleware
-App.use(express.static(PATH.join(__dirname,'dist')));
+App.use(express.static(path.join(__dirname,'dist')));
+
 //get route
 App.get('/',(req,res)=>{
-    res.sendFile(PATH.join(__dirname,'dist','index.html'))
+    res.sendFile(path.join(__dirname,'dist','index.html'))
 });
 //Start the app on port 3000
 App.listen(PORT,()=>{
