@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000;
 //middleware
 App.use(express.static(PATH.join(__dirname,'dist')));
 //get route
-App.get('*',(req,res)=>{
+App.get('/',(req,res)=>{
     res.sendFile(PATH.join(__dirname,'dist','index.html'))
 });
 //Start the app on port 3000
