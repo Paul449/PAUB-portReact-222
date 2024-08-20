@@ -8,7 +8,35 @@ export default function Contact() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
+    // Prepare the email parameters
+    const templateParams = {
+      name: name,
+      email: email,
+      message: message,
+    };
+
+    // Sending the email using EmailJS
+    emailjs.send(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      templateParams,
+      process.env.REACT_APP_EMAILJS_USER_ID
+    )
+    .then((response) => {
+      console.log('Email successfully sent!', response.status, response.text);
+      setStatus('Email sent successfully!');
+      setName(''); // Clear form fields after successful submission
+      setEmail('');
+      setMessage('');
+    })
+    .catch((err) => {
+      console.error('Failed to send email.', err);
+      setStatus('Failed to send email. Please try again later.');
+    });
+  };
 
   return (
     <form className="form" onSubmit={handleSubmit}>
