@@ -40,7 +40,7 @@ footer img {
 .nav-list {
   display: flex;
   flex-direction: row;
-  justify-content: center; /* Center items horizontally */
+  justify-content: flex-end; /* Align items to the right */
   gap: 1rem; /* Add spacing between items */
   padding: 1rem 0; /* Add vertical padding */
   background-color: #E5E4E2; /* Match header background */
