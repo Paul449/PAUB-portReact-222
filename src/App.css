@@ -1,258 +1,238 @@
 
-.wrapper{
-
+/* General Layout */
+.wrapper {
   display: flex;
   flex-direction: column;
+  min-height: 100vh; /* Ensure full height layout */
 }
-header{
 
+/* Header and Footer */
+header, footer {
+  padding: 1rem; /* Consistent padding */
+}
+
+header {
   background-color: #E5E4E2;
   padding-bottom: 5%;
 }
 
-.nav-list{
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  left: 55%;
-  bottom: 20%;
-  color: black;
-}
-#AM{
-  background-color:transparent;
-  background-repeat: no-repeat;
-  border: solid 2px black;
-  color: black;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  font-family: 'Roboto Slab';
-}
-#C{
-  background-color:transparent;
-  background-repeat: no-repeat;
-  border: solid 2px black;
-  color: black;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  font-family: 'Times New Roman', Times, serif;
-}
-#P{
-  background-color:transparent;
-  background-repeat: no-repeat;
-  border: solid 2px black;
-  color: black;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  font-family: 'Roboto Slab';
-}
-#R{
-  background-color:transparent;
-  background-repeat: no-repeat;
-  border: solid 2px black;
-  color: black;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  font-family: 'Roboto Slab';
-}
-#One{
-  margin-right: 2%;
-}
-#Two{
-  margin-right: 2%;
-}
-#Three{
-  margin-right: 2%;
-}
-.content{
-  color: black;
-  background-color: #F0F0F0;
-  padding-bottom: 10%;
-}
-footer{
- 
+footer {
   background-color: #E5E4E2;
-  padding: 3%;
+  padding: 1rem; /* Adjusted padding for better spacing */
   display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 5%;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+  gap: 1rem; /* Add spacing between grid items */
   justify-content: center;
 }
-#G{
-  margin-right: 4%;
-  
-}
-#L{
-  margin-right: 4%;
-}
-/*About Me section*/
 
-.About-Me{
-  text-align: center;
+footer img {
+  margin: 0; /* Remove margin for consistent spacing */
 }
-#Photo-Me{
-  text-align: center;
+
+/* Navigation */
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center items horizontally */
+  gap: 1rem; /* Add spacing between items */
+  padding: 1rem 0; /* Add vertical padding */
+  background-color: #E5E4E2; /* Match header background */
 }
-.paragraph{
+
+.nav-list a {
+  background-color: transparent;
+  border: solid 2px black;
+  color: black;
+  text-align: center;
+  text-decoration: none;
   display: inline-block;
-  text-align: left;
-  font-size: x-large;
-  font-family:'Roboto Slab';
-  text-indent: 0px; 
+  font-size: 1rem; /* Use relative units */
+  font-family: 'Roboto Slab', sans-serif; /* Consistent font */
+  padding: 0.5rem 1rem; /* Adjust padding */
+  border-radius: 5px; /* Add border radius for rounded corners */
 }
 
-.journey{
+.nav-list a:nth-child(2) {
+  font-family: 'Times New Roman', serif; /* Different font for the second item */
+}
+
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    gap: 0.5rem; /* Reduce gap between items */
+  }
+
+  .nav-list a {
+    font-size: 0.9rem; /* Adjust font size */
+    padding: 0.5rem; /* Adjust padding */
+  }
+}
+
+/* About Me Section */
+.About-Me, #Photo-Me {
+  text-align: center;
+}
+
+.paragraph, .journey {
   display: inline-block;
   text-align: left;
   font-size: x-large;
   font-family: 'Roboto Slab';
   text-indent: 0px;
 }
-#Journey-T{
+
+#Journey-T {
   text-align: center;
 }
-/*portfolio section*/
-#port-title{
+
+/* Portfolio Section */
+#port-title {
   text-align: center;
-  margin-bottom: 3%;
-  margin-top: 3%;
-  font-size: 40px;
+  margin: 3% 0;
+  font-size: 2rem;
 }
-.projects{
+
+.projects {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
 }
-.Project-1{
-  margin-right: 3%;
-  
+
+.projects > div {
+  flex: 1 1 200px;
+  max-width: 300px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
 }
-.Project-2{
-  margin-right: 3%;
+
+.projects p {
+  visibility: visible;
+  margin-top: 10px;
+  font-size: 1rem;
 }
-.Project-3{
-  margin-right: 3%;
+
+@media (max-width: 768px) {
+  .projects {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #port-title {
+    font-size: 1.5rem;
+  }
+
+  .projects > div {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
 }
-.Project-1 p{
-  visibility: hidden;
-}
-.Project-2 p{
-  visibility: hidden;
-}
-.Project-3 p{
-  visibility: hidden;
-}
-/*Contact*/
-.form{
+
+/* Contact Form */
+.form {
   border: 5px solid black;
   display: inline-block;
   text-align: center;
-  position: relative;
-  left: 38%;
-  margin-top: 15%;
-  padding: 3%;
-  padding-left: 5%;
-  padding-right: 5%;
+  margin: 2rem auto; /* Center horizontally and adjust margin */
+  padding: 2rem; /* Adjust padding */
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 100%;
+  font-size: 1rem; /* Use relative units */
+  max-width: 600px; /* Set a maximum width for the form */
+  width: 100%; /* Ensure the form takes full width within the max-width */
+  box-sizing: border-box; /* Include padding and border in the element’s total width and height */
 }
-.Name{
-margin-bottom: 4%;
-font-size: large;
-}
-.Email{
-margin-bottom: 4%;
-font-size: large;
-}
-.Message{
-  display: flex;
-  flex-direction: column;
+
+.Name, .Email, .Message {
   margin-bottom: 4%;
-  font-size: large;
+  font-size: 1rem; /* Use relative units */
 }
-#NameText{
-  font-size: large;
-  font-family: Arial, Helvetica, sans-serif;
+
+input, textarea {
+  width: 100%; /* Make inputs and textareas responsive */
+  padding: 0.5rem;
+  font-size: 1rem;
+  box-sizing: border-box; /* Ensure padding and border are included in width */
 }
-#EmailText{
-  font-size: large;
-  font-family: Arial, Helvetica, sans-serif;
+
+#NameText, #EmailText {
+  font-size: 1rem; /* Use relative units */
 }
-#TM{
+
+#TM {
   position: relative;
-  right: 3px;
-  margin-bottom: 5px;
+  right: 0;
+  margin-bottom: 0.5rem;
 }
-#txtM{
-  padding: 25%;
-  padding-right: 6%;
-  font-size: large;
+
+#txtM {
+  padding: 1rem; /* Adjust padding for responsiveness */
+  font-size: 1rem; /* Use relative units */
 }
-#submitBtn{
-  padding: 5%;
-  padding-right: 3%;
-  padding-left: 3%;
-  font-size: large;
+
+#submitBtn {
+  padding: 0.5rem 1rem; /* Adjust padding */
+  font-size: 1rem; /* Use relative units */
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }
-/*button hovers*/
-#AM:hover{
+
+/* Button Hover Effects */
+#AM:hover, #C:hover, #P:hover, #R:hover {
   text-decoration: underline;
 }
-#C:hover{
-  text-decoration: underline;
-}
-#P:hover{
-  text-decoration: underline;
-}
-#R:hover{
-  text-decoration: underline;
-}
-/*portfolio*/
-.Project-1:hover p{
+
+/* Project Hover Effects */
+.Project-1:hover p, .Project-2:hover p, .Project-3:hover p, .Project-4:hover p {
   background-color: #808080;
   visibility: visible;
 }
-.Project-2:hover p{
-  background-color: #808080;
-  visibility: visible;
-}
-.Project-3:hover p{
-  background-color: #808080;
-  visibility: visible;
-}
-.Project-4:hover p{
-  background-color: #808080;
-  visibility: visible;
-}
-/*Resume*/
-#resume-title{
+
+/* Resume Section */
+#resume-title {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: large;
-}
-#download{
-  font-size: 20px;
-}
-.skill1{
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: large;
-}
-.skill2{
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: large;
-}
-.projectLink{
+  font-size: 1.5rem; /* Responsive font size */
   text-align: center;
 }
-#G3{
-  position: relative;
-  bottom: 10px;
+
+#download {
+  font-size: 1.2rem; /* Responsive font size */
 }
+
+.skill1, .skill2 {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem; /* Responsive font size */
+}
+
+.projectLink {
+  text-align: center;
+}
+
+#G3 {
+  position: relative;
+  bottom: 5px; /* Adjust positioning */
+}
+
+@media (max-width: 768px) {
+  #resume-title {
+    font-size: 1.2rem; /* Smaller font size for smaller screens */
+  }
+
+  #download {
+    font-size: 1rem; /* Smaller font size */
+  }
+
+  .skill1, .skill2 {
+    font-size: 0.9rem; /* Smaller font size */
+  }
+
+  #G3 {
+    bottom: 2px; /* Adjust positioning for smaller screens */
+  }
+}
+
 
