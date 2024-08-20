@@ -8,26 +8,7 @@ export default function Contact() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
 
-    const templateParams = {
-      from_name: name,
-      from_email: email,
-      message: message,
-    };
-
-    emailjs.send('service_0dnmtpo', 'template_94c1u0d', templateParams)
-      .then((response) => {
-        console.log('Email sent successfully', response);
-        setName('');
-        setEmail('');
-        setMessage('');
-      })
-      .catch((error) => {
-        console.error('Error sending email', error);
-      });
-  };
 
   return (
     <form className="form" onSubmit={handleSubmit}>
