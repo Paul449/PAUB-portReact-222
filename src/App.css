@@ -80,11 +80,17 @@ footer img {
 }
 
 /* About Me Section */
+
+.About-Me {
+  font-size: 0.9rem; /* Slightly smaller font size */
+}
+
 .About-Me, #Photo-Me {
   text-align: center;
 }
 
 .paragraph, .journey {
+  font-size: 0.9rem;
   display: inline-block;
   text-align: left;
   font-size: x-large;
