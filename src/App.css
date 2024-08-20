@@ -18,16 +18,23 @@ header {
 
 footer {
   background-color: #E5E4E2;
-  padding: 1rem; /* Adjusted padding for better spacing */
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
-  gap: 1rem; /* Add spacing between grid items */
-  justify-content: center;
+  padding: 1rem; /* Adjust padding for spacing */
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center items horizontally */
+  gap: 1rem; /* Add spacing between items */
+}
+
+footer a {
+  display: inline-block; /* Ensure icons align properly */
+
 }
 
 footer img {
-  margin: 0; /* Remove margin for consistent spacing */
+  width: 50px; /* Set consistent width */
+  height: 50px; /* Set consistent height */
+  display: block; /* Remove extra space below images */
 }
+
 
 /* Navigation */
 .nav-list {
@@ -133,8 +140,7 @@ footer img {
 /* Contact Form */
 .form {
   border: 5px solid black;
-  display: inline-block;
-  text-align: center;
+  display: block; /* Change to block to ensure it takes up full width */
   margin: 2rem auto; /* Center horizontally and adjust margin */
   padding: 2rem; /* Adjust padding */
   font-family: Arial, Helvetica, sans-serif;
@@ -142,17 +148,21 @@ footer img {
   max-width: 600px; /* Set a maximum width for the form */
   width: 100%; /* Ensure the form takes full width within the max-width */
   box-sizing: border-box; /* Include padding and border in the element’s total width and height */
+  background-color: #f9f9f9; /* Optional: Background color for contrast */
+  border-radius: 8px; /* Optional: Rounded corners */
 }
 
+
 .Name, .Email, .Message {
-  margin-bottom: 4%;
+  margin-bottom: 1rem; /* Increase space between fields */
   font-size: 1rem; /* Use relative units */
 }
 
 input, textarea {
   width: 100%; /* Make inputs and textareas responsive */
-  padding: 0.5rem;
-  font-size: 1rem;
+  padding: 0.75rem; /* Increase padding for better touch targets */
+  font-size: 1rem; /* Use relative units */
+  margin-bottom: 1rem; /* Space below each input and textarea */
   box-sizing: border-box; /* Ensure padding and border are included in width */
 }
 
@@ -163,7 +173,7 @@ input, textarea {
 #TM {
   position: relative;
   right: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem; /* Adjust margin */
 }
 
 #txtM {
@@ -172,13 +182,20 @@ input, textarea {
 }
 
 #submitBtn {
-  padding: 0.5rem 1rem; /* Adjust padding */
+  padding: 0.75rem 1.5rem; /* Increase padding for better button size */
   font-size: 1rem; /* Use relative units */
   border: none;
   background-color: black;
   color: white;
   cursor: pointer;
+  border-radius: 4px; /* Optional: Rounded corners for the button */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
+
+#submitBtn:hover {
+  background-color: #333; /* Darker shade for hover effect */
+}
+
 
 /* Button Hover Effects */
 #AM:hover, #C:hover, #P:hover, #R:hover {
