@@ -45,6 +45,9 @@ footer img {
   gap: 1rem; /* Add spacing between items */
   padding: 1rem 0; /* Add vertical padding */
   background-color: #E5E4E2; /* Match header background */
+  list-style-type: none; /* Remove default list bullets or dots */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
 
 .nav-list a {
