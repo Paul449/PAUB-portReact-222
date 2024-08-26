@@ -23,7 +23,7 @@ export default function Contact() {
       process.env.REACT_APP_EMAILJS_SERVICE_ID,
       process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
       templateParams,
-      process.env.REACT_APP_EMAILJS_USER_ID
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
     )
     .then((response) => {
       console.log('Email successfully sent!', response.status, response.text);
