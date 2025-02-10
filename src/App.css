@@ -3,22 +3,28 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure full height layout */
-  font-family: 'New Times Roman', Times, serif;
+  padding: 0 2rem; /* Padding to prevent text from touching the edges */
+  box-sizing: border-box;
 }
-
+/*content*/
+.content{
+  background-color:#ECF0F1;
+  color:#333333;
+  height: 100vh;
+}
 /* Header and Footer */
 header, footer {
   padding: 1rem; /* Consistent padding */
 }
 
 header {
-  background-color: #e5e4e2;
-  padding-bottom: 5%;
+  background-color: #3498DB;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
 }
 
 footer {
-  background-color: #E5E4E2;
+  background-color:#34495E;
   padding: 1rem; /* Adjust padding for spacing */
   display: flex; /* Use flexbox for alignment */
   justify-content: center; /* Center items horizontally */
@@ -44,13 +50,13 @@ footer img {
   justify-content: flex-end; /* Align items to the right */
   gap: 1rem; /* Add spacing between items */
   padding: 1rem 0; /* Add vertical padding */
-  background-color: #E5E4E2; /* Match header background */
+  background-color: #3498DB; /* Match header background */
   list-style-type: none; /* Remove default list bullets or dots */
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
 }
 
-.nav-list a {
+.nav-list button {
   background-color: transparent;
   border: solid 2px black;
   color: black;
@@ -61,6 +67,7 @@ footer img {
   font-family: 'Roboto Slab', sans-serif; /* Consistent font */
   padding: 0.5rem 1rem; /* Adjust padding */
   border-radius: 5px; /* Add border radius for rounded corners */
+  width: 100%;
 }
 
 .nav-list a:nth-child(2) {
@@ -84,15 +91,18 @@ footer img {
 
 .About-Me, #Photo-Me {
   text-align: center;
+  font-weight: bold;
+  color: red;
 }
 
 .paragraph, .journey {
   font-size: 0.9rem;
   display: inline-block;
   text-align: left;
-  font-size: x-large;
-  font-family: 'Roboto Slab';
+  font-size: 16px;
+  font-family: 'Montserrat';
   text-indent: 0px;
+  line-height: 1.6;
 }
 
 #Journey-T {
@@ -157,6 +167,9 @@ footer img {
   box-sizing: border-box; /* Include padding and border in the element’s total width and height */
   background-color: #f9f9f9; /* Optional: Background color for contrast */
   border-radius: 8px; /* Optional: Rounded corners */
+  min-width: 300px;
+  position: relative;
+  top: 10em;
 }
 
 
@@ -213,6 +226,7 @@ input, textarea {
 .Project-1:hover p, .Project-2:hover p, .Project-3:hover p, .Project-4:hover p {
   background-color: #808080;
   visibility: visible;
+  font-family: 'Montserrat';
 }
 
 /* Resume Section */
@@ -221,15 +235,17 @@ input, textarea {
   font-size: 1.5rem; /* Responsive font size */
   text-align: center;
 }
-
+#resumebtn{
+  border: #808080 solid 2.5px;
+}
 #download {
   font-size: 1.2rem; /* Responsive font size */
 }
 
+
 .skill1, .skill2 {
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem; /* Responsive font size */
+  font-family: 'Montserrat';
+  font-size: 16px; /* Responsive font size */
 }
 
 .projectLink {

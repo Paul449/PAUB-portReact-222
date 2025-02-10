@@ -36,8 +36,8 @@ export default function AboutMe(){
         of technologies like Node.js, Express, Sequelize, Mongoose, and React. These experiences not only honed my technical skills but also 
         deepened my love for problem-solving.Naturally, there have been bumps in the road. I've faced challenges like getting a single JavaScript 
         function to work or connecting the front end with the back end using MERN stack technologies. However, each obstacle has made me more determined 
-        to keep moving forward.Looking ahead, I'm eager to continue growing as a developer. I have ambitions to learn TypeScript, Python, AI, and Salesforce. 
-        I'm excited to tackle new challenges, participate in creative projects, and stay current with the rapidly evolving tech industry.Check out my work and 
+        to keep moving forward.Looking ahead, I'm eager to continue growing as a developer. I have ambitions to learn TypeScript, AI, and Salesforce. 
+        I'm excited to tackle new challenges, participate in creative projects, and stay current with the rapidly evolving tech industry. Check out my work and 
         don't hesitate to get in touch with me—I'm always open to new ideas and collaborations.
         </p>
     </div>
