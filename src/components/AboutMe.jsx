@@ -8,7 +8,7 @@ export default function AboutMe(){
     <div className="About-Me"><h2>About Me</h2></div>
     <div id="Photo-Me">
         <img 
-        src="../public/assets/Screenshot 2024-07-12 141054.png"
+        src="../assets/Screenshot 2024-07-12 141054.png"
         width='210px'
         height='200px'
         >
