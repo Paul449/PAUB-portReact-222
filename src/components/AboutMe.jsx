@@ -8,11 +8,10 @@ export default function AboutMe(){
     <div className="About-Me"><h2>About Me</h2></div>
     <div id="Photo-Me">
         <img 
-        src="https://media.licdn.com/dms/image/C4E03AQG1fZyVTP_5mw/profile-displayphoto-shrink_800_800/0/1647986042864?e=1726099200&v=beta&t=cPgYKoYLxeamZo-kzLuauRZGIoTx9lEEnhi27cxBY4I"
-        width={'210px'}
-        height={'200px'} 
+        src="../public/assets/Screenshot 2024-07-12 141054.png"
+        width='210px'
+        height='200px'
         >
-
         </img>
     </div>
     <div className="paragraph">
