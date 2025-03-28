@@ -47,7 +47,6 @@ footer img {
 .nav-list {
   display: flex;
   flex-direction: row;
-  color:#f9f9f9;
   justify-content: flex-end; /* Align items to the right */
   gap: 1rem; /* Add spacing between items */
   padding: 1rem 0; /* Add vertical padding */
@@ -59,7 +58,7 @@ footer img {
 .nav-list button {
   background-color: transparent;
   border: solid 2px black;
-  color: black;
+  color: #ffffff;
   text-align: center;
   text-decoration: none;
   display: inline-block;
