@@ -50,7 +50,8 @@ footer img {
   justify-content: flex-end; /* Align items to the right */
   gap: 1rem; /* Add spacing between items */
   padding: 1rem 0; /* Add vertical padding */
-  background-color: #3498DB; /* Match header background */
+  background-color: #0a192f; /* Match header background */
+  color:#ffffff;
   list-style-type: none; /* Remove default list bullets or dots */
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
