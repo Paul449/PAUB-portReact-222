@@ -1,57 +1,136 @@
 import { pdfjs } from "react-pdf";
 import React, { useEffect, useState } from "react";
-//function
+
 export default function Resume(){
-   const [download,setDownload] = useState(false);
-   useEffect(() => {
-    const pdfPath = "/src/Paul-Bilbatua-Resume.pdf";
+    const [download, setDownload] = useState(false);
+    
+    useEffect(() => {
+        const pdfPath = "/src/Paul-Bilbatua-Resume.pdf";
+        pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-    pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+        pdfjs.getDocument(pdfPath).promise
+            .then((pdf) => {
+                console.log("PDF loaded", pdf);
+            })
+            .catch((error) => {
+                console.error("Error loading PDF", error);
+            });
+    }, []);
 
-    pdfjs.getDocument(pdfPath).promise
-        .then((pdf) => {
-            console.log("PDF loaded", pdf);
-        })
-        .catch((error) => {
-            console.error("Error loading PDF", error);
-        });
-}, []);
+    const handleDownload = () => {
+        window.open("/src/Paul-Bilbatua-Resume.pdf", "_blank");
+        setDownload(true);
+    };
 
-const handleDownload = () => {
-    window.open("/src/Paul-Bilbatua-Resume.pdf", "_blank");
-    setDownload(true);
-};
-    return(<>
-    <div>
-        <h2 id="resume-title">Resume</h2>
-        <p id="download">Download my <button onClick={handleDownload} id="resumebtn">resume</button></p>
-    </div>
-    <div className="front-end">
-        <h2>Front End Proficiencies</h2>
-        <ol className="skill1">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Java</li>
-            <li>Python</li>
-            <li>Webpack</li>
-            <li>Web API</li>
-            <li>Git/GitHub/GitLab</li>
-            <li>ReactJS</li>
-            <li>Linux CLI</li>
-        </ol>
-    </div>
-    <div className="Back-end">
-        <h2>Back End Proficiencies</h2>
-        <ol className="skill2">
-            <li>MERN Stack</li>
-            <li>Node.js</li>
-            <li>APIs (REST/GraphQL)</li>
-            <li>Express.js</li>
-            <li>Jest</li>
-            <li>SQL/PostgreSQL</li>
-            <li>NoSQL/MongoDB</li>
-        </ol>
-    </div>
-    </>)
+    const frontendSkills = [
+        { name: "HTML5", level: "Expert", years: "2+" },
+        { name: "CSS3", level: "Expert", years: "2+" },
+        { name: "JavaScript (ES6+)", level: "Advanced", years: "2+" },
+        { name: "React.js", level: "Advanced", years: "1.5+" },
+        { name: "Java", level: "Intermediate", years: "1+" },
+        { name: "Python", level: "Beginner", years: "<1" },
+        { name: "Webpack", level: "Intermediate", years: "1+" },
+        { name: "Web APIs", level: "Advanced", years: "1.5+" },
+        { name: "Git/GitHub/GitLab", level: "Advanced", years: "2+" },
+        { name: "Linux CLI", level: "Intermediate", years: "1+" }
+    ];
+
+    const backendSkills = [
+        { name: "MERN Stack", level: "Advanced", years: "1.5+" },
+        { name: "Node.js", level: "Advanced", years: "1.5+" },
+        { name: "Express.js", level: "Advanced", years: "1.5+" },
+        { name: "RESTful APIs", level: "Advanced", years: "1.5+" },
+        { name: "GraphQL", level: "Intermediate", years: "1+" },
+        { name: "Jest Testing", level: "Intermediate", years: "1+" },
+        { name: "PostgreSQL", level: "Intermediate", years: "1+" },
+        { name: "MongoDB", level: "Advanced", years: "1.5+" }
+    ];
+
+    const SkillItem = ({ skill }) => (
+        <div className="skill-item">
+            <div className="skill-header">
+                <span className="skill-name">{skill.name}</span>
+                <span className={`skill-level ${skill.level.toLowerCase()}`}>
+                    {skill.level}
+                </span>
+            </div>
+            <div className="skill-details">
+                <span className="skill-years">{skill.years} years</span>
+                <div className="skill-bar">
+                    <div 
+                        className={`skill-progress ${skill.level.toLowerCase()}`}
+                        style={{
+                            width: skill.level === 'Expert' ? '95%' : 
+                                   skill.level === 'Advanced' ? '80%' : 
+                                   skill.level === 'Intermediate' ? '65%' : '40%'
+                        }}
+                    ></div>
+                </div>
+            </div>
+        </div>
+    );
+
+    return (
+        <>
+            <div className="resume-header">
+                <h2 id="resume-title">Resume</h2>
+                <p className="resume-subtitle">
+                    Full Stack Developer with expertise in modern web technologies
+                </p>
+                <div className="resume-download">
+                    <p id="download">
+                        Download my{" "}
+                        <button onClick={handleDownload} id="resumebtn" className="download-btn">
+                            📄 Resume PDF
+                        </button>
+                    </p>
+                    {download && (
+                        <p className="download-success">✅ Resume downloaded successfully!</p>
+                    )}
+                </div>
+            </div>
+
+            <div className="skills-container">
+                <div className="skills-section">
+                    <div className="skills-header">
+                        <h2>🎨 Frontend Proficiencies</h2>
+                        <p>User interface and client-side development</p>
+                    </div>
+                    <div className="skills-grid">
+                        {frontendSkills.map((skill, index) => (
+                            <SkillItem key={index} skill={skill} />
+                        ))}
+                    </div>
+                </div>
+
+                <div className="skills-section">
+                    <div className="skills-header">
+                        <h2>⚙️ Backend Proficiencies</h2>
+                        <p>Server-side development and database management</p>
+                    </div>
+                    <div className="skills-grid">
+                        {backendSkills.map((skill, index) => (
+                            <SkillItem key={index} skill={skill} />
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            <div className="learning-section">
+                <h3>🚀 Currently Learning</h3>
+                <div className="learning-items">
+                    <span className="learning-item">TypeScript</span>
+                    <span className="learning-item">Python (Advanced)</span>
+                    <span className="learning-item">Salesforce</span>
+                    <span className="learning-item">AI/Machine Learning</span>
+                </div>
+            </div>
+
+            <div className="resume-footer">
+                <p>
+                    <strong>Ready to collaborate?</strong> Let's discuss how my skills can contribute to your next project.
+                </p>
+            </div>
+        </>
+    );
 }
