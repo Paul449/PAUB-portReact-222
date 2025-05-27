@@ -23,27 +23,25 @@ export default function Resume(){
     };
 
     const frontendSkills = [
-        { name: "HTML5", level: "Expert", years: "2+" },
-        { name: "CSS3", level: "Expert", years: "2+" },
+        { name: "HTML5", level: "Advanced", years: "1+" },
+        { name: "CSS3", level: "Expert", years: "1+" },
         { name: "JavaScript (ES6+)", level: "Advanced", years: "2+" },
-        { name: "React.js", level: "Advanced", years: "1.5+" },
-        { name: "Java", level: "Intermediate", years: "1+" },
-        { name: "Python", level: "Beginner", years: "<1" },
-        { name: "Webpack", level: "Intermediate", years: "1+" },
-        { name: "Web APIs", level: "Advanced", years: "1.5+" },
-        { name: "Git/GitHub/GitLab", level: "Advanced", years: "2+" },
-        { name: "Linux CLI", level: "Intermediate", years: "1+" }
+        { name: "React.js", level: "Advanced", years: "<1" },
+        { name: "Webpack", level: "Intermediate", years: "<1" },
+        { name: "Web APIs", level: "Advanced", years: "<1" },
+        { name: "Git/GitHub/GitLab", level: "Advanced", years: "1.5+" },
+        { name: "Linux CLI", level: "Intermediate", years: "1.5+" }
     ];
 
     const backendSkills = [
-        { name: "MERN Stack", level: "Advanced", years: "1.5+" },
-        { name: "Node.js", level: "Advanced", years: "1.5+" },
-        { name: "Express.js", level: "Advanced", years: "1.5+" },
-        { name: "RESTful APIs", level: "Advanced", years: "1.5+" },
-        { name: "GraphQL", level: "Intermediate", years: "1+" },
-        { name: "Jest Testing", level: "Intermediate", years: "1+" },
+        { name: "MERN Stack", level: "Advanced", years: "1" },
+        { name: "Node.js", level: "Advanced", years: "1" },
+        { name: "Express.js", level: "Advanced", years: "<1" },
+        { name: "RESTful APIs", level: "Advanced", years: "1" },
+        { name: "GraphQL", level: "Intermediate", years: "<1" },
+        { name: "Jest Unit Testing", level: "Intermediate", years: "<1" },
         { name: "PostgreSQL", level: "Intermediate", years: "1+" },
-        { name: "MongoDB", level: "Advanced", years: "1.5+" }
+        { name: "MongoDB", level: "Advanced", years: "<1" }
     ];
 
     const SkillItem = ({ skill }) => (

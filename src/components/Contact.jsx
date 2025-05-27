@@ -1,52 +1,50 @@
-import { useState } from "react";
-import emailjs from 'emailjs-com';
+import React, { useRef, useState } from "react";
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
+    const form = useRef();
     const [status, setStatus] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleSubmit = async (e) => {
+    const sendEmail = (e) => {
         e.preventDefault();
         setIsSubmitting(true);
         setStatus('');
 
         // Basic validation
-        if (!name.trim() || !email.trim() || !message.trim()) {
+        const formData = new FormData(form.current);
+        const name = formData.get('user_name');
+        const email = formData.get('user_email');
+        const message = formData.get('message');
+
+        if (!name?.trim() || !email?.trim() || !message?.trim()) {
             setStatus('Please fill in all fields.');
             setIsSubmitting(false);
             return;
         }
 
-        // Prepare the email parameters
-        const templateParams = {
-            name: name,
-            email: email,
-            message: message,
-        };
-
-        try {
-            // Sending the email using EmailJS
-            const response = await emailjs.send(
-                process.env.REACT_APP_EMAILJS_SERVICE_ID,
-                process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-                templateParams,
-                process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        emailjs
+            .sendForm(
+                service_mbpuseu,
+                template_94c1u0d,
+                form.current,
+                {
+                    publicKey: vHk_RjMhUMhkuSNR9,
+                }
+            )
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                    setStatus('✅ Message sent successfully! I\'ll get back to you soon.');
+                    form.current.reset(); // Reset the form
+                    setIsSubmitting(false);
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                    setStatus('❌ Failed to send message. Please try again or contact me directly.');
+                    setIsSubmitting(false);
+                }
             );
-            
-            console.log('Email successfully sent!', response.status, response.text);
-            setStatus('✅ Message sent successfully! I\'ll get back to you soon.');
-            setName('');
-            setEmail('');
-            setMessage('');
-        } catch (err) {
-            console.error('Failed to send email.', err);
-            setStatus('❌ Failed to send message. Please try again or contact me directly.');
-        } finally {
-            setIsSubmitting(false);
-        }
     };
 
     return (
@@ -66,7 +64,7 @@ export default function Contact() {
                             <span className="contact-icon">📧</span>
                             <div>
                                 <strong>Email</strong>
-                                <p>paul_bilbatua@hotmail.com</p>
+                                <p>paul.bilbatua@example.com</p>
                             </div>
                         </div>
                         <div className="contact-item">
@@ -74,8 +72,8 @@ export default function Contact() {
                             <div>
                                 <strong>LinkedIn</strong>
                                 <p>
-                                    <a href="https://www.linkedin.com/in/paul-bilbatua-software-developer/" target="_blank" rel="noopener noreferrer">
-                                        linkedin/in/paul-bilbatua-software-developer
+                                    <a href="#" target="_blank" rel="noopener noreferrer">
+                                        linkedin.com/in/paulbilbatua
                                     </a>
                                 </p>
                             </div>
@@ -85,7 +83,7 @@ export default function Contact() {
                             <div>
                                 <strong>GitHub</strong>
                                 <p>
-                                    <a href="https://github.com/Paul449" target="_blank" rel="noopener noreferrer">
+                                    <a href="#" target="_blank" rel="noopener noreferrer">
                                         github.com/paul449
                                     </a>
                                 </p>
@@ -95,9 +93,7 @@ export default function Contact() {
                             <span className="contact-icon">📍</span>
                             <div>
                                 <strong>Location</strong>
-                                <p>San Antonio, Texas</p>
                                 <p>Available for remote work</p>
-                                <p>Open to relocation</p>
                             </div>
                         </div>
                     </div>
@@ -110,14 +106,13 @@ export default function Contact() {
 
                 <div className="contact-form-section">
                     <h3>Send Me a Message</h3>
-                    <form className="contact-form" onSubmit={handleSubmit}>
+                    <form ref={form} className="contact-form" onSubmit={sendEmail}>
                         <div className="form-group">
-                            <label htmlFor="NameText">Your Name *</label>
+                            <label htmlFor="user_name">Your Name *</label>
                             <input
-                                id="NameText"
+                                id="user_name"
                                 type="text"
-                                value={name}
-                                onChange={(e) => setName(e.target.value)}
+                                name="user_name"
                                 placeholder="Enter your full name"
                                 required
                                 disabled={isSubmitting}
@@ -125,12 +120,11 @@ export default function Contact() {
                         </div>
 
                         <div className="form-group">
-                            <label htmlFor="EmailText">Your Email *</label>
+                            <label htmlFor="user_email">Your Email *</label>
                             <input
-                                id="EmailText"
+                                id="user_email"
                                 type="email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
+                                name="user_email"
                                 placeholder="your.email@example.com"
                                 required
                                 disabled={isSubmitting}
@@ -138,11 +132,10 @@ export default function Contact() {
                         </div>
 
                         <div className="form-group">
-                            <label htmlFor="txtM">Your Message *</label>
+                            <label htmlFor="message">Your Message *</label>
                             <textarea
-                                id="txtM"
-                                value={message}
-                                onChange={(e) => setMessage(e.target.value)}
+                                id="message"
+                                name="message"
                                 placeholder="Tell me about your project, questions, or just say hello!"
                                 rows="6"
                                 required
@@ -178,4 +171,3 @@ export default function Contact() {
         </div>
     );
 }
-
