@@ -5,7 +5,7 @@ export default function Resume(){
     const [download, setDownload] = useState(false);
     
     useEffect(() => {
-        const pdfPath = "/src/Paul-Bilbatua-Resume.pdf";
+        const pdfPath = "./src/PaulBilbatua-resume.pdf";
         pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
         pdfjs.getDocument(pdfPath).promise
@@ -18,31 +18,43 @@ export default function Resume(){
     }, []);
 
     const handleDownload = () => {
-        window.open("/src/Paul-Bilbatua-Resume.pdf", "_blank");
+        window.open("/src/PaulBilbatua-resume.pdf", "_blank");
         setDownload(true);
     };
 
     const frontendSkills = [
-        { name: "HTML5", level: "Advanced", years: "1+" },
-        { name: "CSS3", level: "Expert", years: "1+" },
-        { name: "JavaScript (ES6+)", level: "Advanced", years: "2+" },
-        { name: "React.js", level: "Advanced", years: "<1" },
-        { name: "Webpack", level: "Intermediate", years: "<1" },
-        { name: "Web APIs", level: "Advanced", years: "<1" },
-        { name: "Git/GitHub/GitLab", level: "Advanced", years: "1.5+" },
-        { name: "Linux CLI", level: "Intermediate", years: "1.5+" }
-    ];
+    { name: "HTML5", level: "Advanced", years: "1+" },
+    { name: "CSS3", level: "Expert", years: "1+" },
+    { name: "JavaScript (ES6+)", level: "Advanced", years: "2+" },
+    { name: "React.js", level: "Advanced", years: "<1" },
+    { name: "Tailwind CSS", level: "Advanced", years: "<1" },
+    { name: "Bootstrap", level: "Intermediate", years: "<1" },
+    { name: "Component Libraries", level: "Intermediate", years: "<1" },
+    { name: "Webpack", level: "Intermediate", years: "<1" },
+    { name: "Web APIs", level: "Advanced", years: "<1" },
+    { name: "Git/GitHub/GitLab", level: "Advanced", years: "1.5+" },
+    { name: "Linux CLI", level: "Intermediate", years: "1.5+" }
+];
 
-    const backendSkills = [
-        { name: "MERN Stack", level: "Advanced", years: "1" },
-        { name: "Node.js", level: "Advanced", years: "1" },
-        { name: "Express.js", level: "Advanced", years: "<1" },
-        { name: "RESTful APIs", level: "Advanced", years: "1" },
-        { name: "GraphQL", level: "Intermediate", years: "<1" },
-        { name: "Jest Unit Testing", level: "Intermediate", years: "<1" },
-        { name: "PostgreSQL", level: "Intermediate", years: "1+" },
-        { name: "MongoDB", level: "Advanced", years: "<1" }
-    ];
+const backendSkills = [
+    { name: "MERN Stack", level: "Advanced", years: "1" },
+    { name: "Node.js", level: "Advanced", years: "1" },
+    { name: "Express.js", level: "Advanced", years: "<1" },
+    { name: "RESTful APIs", level: "Advanced", years: "1" },
+    { name: "GraphQL", level: "Intermediate", years: "<1" },
+    { name: "Jest Unit Testing", level: "Intermediate", years: "<1" },
+    { name: "PostgreSQL", level: "Intermediate", years: "1+" },
+    { name: "MongoDB", level: "Advanced", years: "<1" }
+];
+
+const toolsAndMethodologies = [
+    { name: "Git/GitHub", level: "Advanced", years: "1.5+" },
+    { name: "Postman", level: "Advanced", years: "1+" },
+    { name: "Jest Testing", level: "Intermediate", years: "<1" },
+    { name: "Webpack", level: "Intermediate", years: "<1" },
+    { name: "Agile/Scrum", level: "Intermediate", years: "<1" },
+    { name: "Component-Driven Development", level: "Advanced", years: "<1" }
+];
 
     const SkillItem = ({ skill }) => (
         <div className="skill-item">
@@ -112,15 +124,23 @@ export default function Resume(){
                         ))}
                     </div>
                 </div>
+                <div>
+                    <div className="skills-header">
+                        <h2>🛠️ Tools & Methodologies</h2>
+                        <p>Development tools and best practices</p>
+                    </div>
+                    <div className="skills-grid">
+                        {toolsAndMethodologies.map((skill, index) => (
+                            <SkillItem key={index} skill={skill} />
+                        ))}
+                    </div>
+                </div>
             </div>
 
             <div className="learning-section">
                 <h3>🚀 Currently Learning</h3>
                 <div className="learning-items">
                     <span className="learning-item">TypeScript</span>
-                    <span className="learning-item">Python (Advanced)</span>
-                    <span className="learning-item">Salesforce</span>
-                    <span className="learning-item">AI/Machine Learning</span>
                 </div>
             </div>
 

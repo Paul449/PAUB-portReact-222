@@ -1,18 +1,48 @@
 import React from "react";
 export default function Portfolio() {
     const projects = [
-        {
+            {
             id: 1,
-            title: "Dexplorer",
-            description: "A comprehensive Pokémon encyclopedia featuring detailed information, search functionality, and interactive features for Pokémon enthusiasts.",
-            technologies: ["React", "CSS", "JavaScript", "API Integration"],
-            liveUrl: "https://paul449.github.io/DexPlorer/",
+            title: "Weather Dashboard",
+            description: "Interactive weather application providing real-time weather data, forecasts, and location-based weather information with clean UI.",
+            technologies: ["JavaScript", "Weather API", "HTML", "CSS"],
+            liveUrl: "https://paul449.github.io/Pau-Weather-89/",
             githubUrl: "#", // Add your actual GitHub URL
-            image: "./assets/Screenshot%202024-07-23%20191438.png",
-            category: "Web Application"
+            image: "./assets/Screenshot%202024-07-23%20200236.png",
+            category: "Front End Web Application",
         },
         {
             id: 2,
+            title: "Dexplorer",
+            description: "A comprehensive Pokémon encyclopedia featuring detailed information, search functionality, and interactive features for Pokémon enthusiasts.",
+            technologies: ["HTML", "CSS","Tailwind" ,"JavaScript", "API Integration"],
+            liveUrl: "https://paul449.github.io/DexPlorer/",
+            githubUrl: "https://github.com/Paul449/DexPlorer", // Add your actual GitHub URL
+            image: "./assets/Screenshot%202024-07-23%20191438.png",
+            category: " Front End Web Application"
+        },
+        {
+            id: 3,
+            title: "SVG logo generator",
+            description: "A command-line tool that generates customizable SVG logos based on user input, allowing for dynamic logo creation with various styles.",
+            technologies: ["Node.js", "Inquirer", "SVG", "JavaScript"],
+            liveUrl: "#", // Add live URL if available
+            githubUrl: "https://github.com/Paul449/pau-Logo.89000",
+            image: "./assets/Screenshot 2025-05-27 133516.png",
+            category: "Command-Line Application"
+        },
+        {
+            id: 4,
+            title: "Employee Tracker",
+            description: "A command-line application for managing employee records, allowing users to add, view, and update employee information in a MySQL database.",
+            technologies: ["Node.js", "postgreSQL", "Inquirer", "JavaScript"],
+            liveUrl: "#", // Add live URL if available
+            githubUrl: "https://github.com/Paul449/PAU-EmpTracker89",
+            image: "./assets/Screenshot 2024-12-04 134057.png",
+            category: "Command-Line Application"
+        },
+        {
+            id: 5,
             title: "Messaging App",
             description: "Real-time messaging platform enabling seamless communication between users with modern chat features and responsive design.",
             technologies: ["MERN Stack", "Socket.io", "Real-time Communication"],
@@ -22,24 +52,34 @@ export default function Portfolio() {
             category: "Full Stack Application"
         },
         {
-            id: 3,
-            title: "Weather Dashboard",
-            description: "Interactive weather application providing real-time weather data, forecasts, and location-based weather information with clean UI.",
-            technologies: ["JavaScript", "Weather API", "HTML", "CSS"],
-            liveUrl: "https://paul449.github.io/Pau-Weather-89/",
-            githubUrl: "#", // Add your actual GitHub URL
-            image: "./assets/Screenshot%202024-07-23%20200236.png",
-            category: "Web Application"
+            id: 6,
+            title: "API Social Network",
+            description: "A social networking application built with a RESTful API, allowing users to create accounts, post updates, and interact with others.",
+            technologies: ["Node.js", "Express", "MongoDB", "RESTful API","postman"],
+            liveUrl: "#",
+            githubUrl: "https://github.com/Paul449/Net-PaulAPI83",
+            image: "./assets/Screenshot 2025-05-27 132751.png",
+            category: "Back End Application"
         },
         {
-            id: 4,
+            id: 7,
             title: "Vote4Goat",
             description: "Fantasy basketball voting application where users can vote for their favorite players and view real-time voting results.",
-            technologies: ["MERN Stack", "MongoDB", "Express", "React"],
+            technologies: ["MERN Stack", "MongoDB", "Express", "React","Node.js"],
             liveUrl: "#", // Add live URL if available
-            githubUrl: "#", // Add your actual GitHub URL
+            githubUrl: "https://github.com/Paul449/vote4Goat", // Add your actual GitHub URL
             image: "./assets/Screenshot%202024-07-23%20200824.png",
             category: "Full Stack Application"
+        },
+        {
+            id: 8,
+            title: "AI-Powered Chatbot for English Practice",
+            description: "An AI-driven chatbot designed to help users practice English conversation skills through interactive dialogues and feedback.",
+            technologies: ["Node.js", "Express", "AI Integration", "Chatbot", "JavaScript","react","Bootstrap"],
+            liveUrl: "#",
+            githubUrl: "https://github.com/Paul449/PauEnglish-Practice99",
+            image: "./assets/Screenshot 2024-07-26 163227.png",
+            category: "full Stack Application"
         }
     ];
 
@@ -51,7 +91,7 @@ export default function Portfolio() {
                     A collection of projects showcasing my full-stack development skills
                 </p>
             </div>
-            
+             
             <div className="projects-container">
                 {projects.map(project => (
                     <div key={project.id} className="project-card">
