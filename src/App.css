@@ -86,8 +86,6 @@ footer img {
 }
 
 /* About Me Section */
-
-
 .About-Me, #Photo-Me {
   text-align: center;
   font-weight: bold;
@@ -107,6 +105,7 @@ footer img {
 #Journey-T {
   text-align: center;
 }
+
 
 /* Portfolio Section */
 #port-title {

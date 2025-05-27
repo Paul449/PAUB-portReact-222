@@ -1,5 +1,7 @@
 import { useState } from "react"
 //AboutMe XML
+import { useState } from "react"
+//AboutMe XML
 export default function AboutMe(){
     //hooks
     const[Photo, setPhoto] = useState('');
