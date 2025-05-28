@@ -7,7 +7,7 @@ export default function Portfolio() {
             description: "Interactive weather application providing real-time weather data, forecasts, and location-based weather information with clean UI.",
             technologies: ["JavaScript", "Weather API", "HTML", "CSS"],
             liveUrl: "https://paul449.github.io/Pau-Weather-89/",
-            githubUrl: "#", // Add your actual GitHub URL
+            githubUrl: "https://github.com/Paul449/Pau-Weather-89/", // Add your actual GitHub URL
             image: "./assets/Screenshot%202024-07-23%20200236.png",
             category: "Front End Web Application",
         },
