@@ -26,7 +26,7 @@ export default function Portfolio() {
             title: "SVG logo generator",
             description: "A command-line tool that generates customizable SVG logos based on user input, allowing for dynamic logo creation with various styles.",
             technologies: ["Node.js", "Inquirer", "SVG", "JavaScript"],
-            liveUrl: "#", // Add live URL if available
+            liveUrl: "", // Add live URL if available
             githubUrl: "https://github.com/Paul449/pau-Logo.89000",
             image: "./assets/Screenshot 2025-05-27 133516.png",
             category: "Command-Line Application"
@@ -36,7 +36,7 @@ export default function Portfolio() {
             title: "Employee Tracker",
             description: "A command-line application for managing employee records, allowing users to add, view, and update employee information in a MySQL database.",
             technologies: ["Node.js", "postgreSQL", "Inquirer", "JavaScript"],
-            liveUrl: "#", // Add live URL if available
+            liveUrl: "https://www.youtube.com/watch?v=rRaP8HVXLgA", // Add live URL if available
             githubUrl: "https://github.com/Paul449/PAU-EmpTracker89",
             image: "./assets/Screenshot 2024-12-04 134057.png",
             category: "Command-Line Application"
