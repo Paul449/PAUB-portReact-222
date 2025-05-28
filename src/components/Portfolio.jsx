@@ -26,7 +26,7 @@ export default function Portfolio() {
             title: "SVG logo generator",
             description: "A command-line tool that generates customizable SVG logos based on user input, allowing for dynamic logo creation with various styles.",
             technologies: ["Node.js", "Inquirer", "SVG", "JavaScript"],
-            liveUrl: "", // Add live URL if available
+            liveUrl: "https://youtu.be/wuIajm8IhNU", // Add live URL if available
             githubUrl: "https://github.com/Paul449/pau-Logo.89000",
             image: "./assets/Screenshot 2025-05-27 133516.png",
             category: "Command-Line Application"
