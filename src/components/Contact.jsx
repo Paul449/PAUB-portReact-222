@@ -25,11 +25,11 @@ export default function Contact() {
 
         emailjs
             .sendForm(
-                service_mbpuseu,
-                template_94c1u0d,
+                'service_mbpuseu',
+                'template_04t6imf',
                 form.current,
                 {
-                    publicKey: vHk_RjMhUMhkuSNR9,
+                    publicKey: 'vHk_RjMhUMhkuSNR9',
                 }
             )
             .then(
