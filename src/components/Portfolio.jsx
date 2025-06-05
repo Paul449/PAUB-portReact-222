@@ -89,6 +89,8 @@ export default function Portfolio() {
             liveUrl: "https://orgmigrator.netlify.app/",
             githubUrl: "open source project",
             image: "./assets/Screenshot 2025-06-05 165138.png",
+            height: 200,
+            width: 250,
             category: "Full Stack Application, website"
         }
     ];
