@@ -79,7 +79,7 @@ export default function Portfolio() {
             liveUrl: "#",
             githubUrl: "https://github.com/Paul449/PauEnglish-Practice99",
             image: "./assets/Screenshot 2024-07-26 163227.png",
-            category: "full Stack Application"
+            category: "Full Stack Application"
         },
         {
             id: 9,
@@ -89,9 +89,7 @@ export default function Portfolio() {
             liveUrl: "https://orgmigrator.netlify.app/",
             githubUrl: "open source project",
             image: "./assets/Screenshot 2025-06-05 165138.png",
-            height: 200,
-            width: 250,
-            category: "Full Stack Application, website"
+            category: "Full Stack Application"
         }
     ];
 
