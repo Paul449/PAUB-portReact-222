@@ -140,7 +140,7 @@ const toolsAndMethodologies = [
             <div className="learning-section">
                 <h3>🚀 Currently Learning</h3>
                 <div className="learning-items">
-                    <span className="learning-item">TypeScript</span>
+                    <span className="learning-item">Next JS & Java</span>
                 </div>
             </div>
 
