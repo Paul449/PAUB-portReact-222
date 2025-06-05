@@ -84,7 +84,7 @@ export default function Portfolio() {
         {
             id: 9,
             title: "Data Migrator",
-            description: "A data migration tool website to promote the open-source project 'Data Migrator', which helps developers migrate data between different salesforce.",
+            description: "A data migration tool website to promote the open-source project 'Data Migrator', which helps developers migrate data between different salesforce orgs.",
             technologies: ["React", "CSS", "JavaScript", "HTML"],
             liveUrl: "https://orgmigrator.netlify.app/",
             githubUrl: "open source project",
