@@ -65,7 +65,7 @@ export default function Portfolio() {
             id: 7,
             title: "Vote4Goat",
             description: "Fantasy basketball voting application where users can vote for their favorite players and view real-time voting results.",
-            technologies: ["MERN Stack", "MongoDB", "Express", "React","Node.js","Graphql","Apollo client", "Apollo server", "vite","eslintrc.cjs"],
+            technologies: ["MERN Stack", "MongoDB","NoSQL", "Express", "React","Node.js","Graphql","Apollo client", "Apollo server", "vite","eslintrc.cjs"],
             liveUrl: "https://vote4goat.netlify.app/", // Add live URL if available
             githubUrl: "https://github.com/Paul449/vote4Goat", // Add your actual GitHub URL
             image: "./assets/Screenshot%202024-07-23%20200824.png",
