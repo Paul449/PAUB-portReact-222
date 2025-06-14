@@ -39,7 +39,7 @@ export default function Portfolio() {
             liveUrl: "https://www.youtube.com/watch?v=rRaP8HVXLgA", // Add live URL if available
             githubUrl: "https://github.com/Paul449/PAU-EmpTracker89",
             image: "./assets/Screenshot 2024-12-04 134057.png",
-            category: "Command-Line Application"
+            category: "Back End Application"
         },
         {
             id: 5,
