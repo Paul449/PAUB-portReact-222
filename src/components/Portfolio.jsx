@@ -74,12 +74,12 @@ export default function Portfolio() {
         {
             id: 8,
             title: "AI-Powered Chatbot for English Practice",
-            description: "An AI-driven chatbot designed to help users practice English conversation skills through interactive dialogues and feedback.",
-            technologies: ["Node.js", "Express", "AI Integration", "Chatbot", "JavaScript","react","Bootstrap"],
+            description: "An intelligent voice-to-voice language learning application that enables natural conversation practice with AI through real-time speech interaction.",
+            technologies: ["Node.js", "Express", "RESTful API", "Openai", "JavaScript","React","Bootstrap","State management","JSON","MongoDB","NoSQL"],
             liveUrl: "#",
             githubUrl: "https://github.com/Paul449/PauEnglish-Practice99",
             image: "./assets/Screenshot 2024-07-26 163227.png",
-            category: "Full Stack Application"
+            category: "MERN Stack Application"
         },
         {
             id: 9,
